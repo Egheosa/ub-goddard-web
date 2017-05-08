@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Goddard App">
+    <meta name="author" content="Egheosasere Otasowie, Daniel Romero">
 
     <title>Goddard</title>
 
@@ -50,6 +50,12 @@
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
+                    <% if current_user.blank? %>
+                      <li class="btn btn-default page-scroll"><%= link_to "Sign Up", new_user_registration_path %></li>
+                      <li class="btn btn-default page-scroll"><%= link_to "Log In", new_user_session_path %></li>
+                    <% else %>
+                      <li class="btn btn-default page-scroll"><%= link_to("Logout (#{current_user.email})", destroy_user_session_path, :method => :delete) %></li>
+                    <% end %>
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
@@ -67,51 +73,84 @@
     </nav>
 
     <!-- Intro Section -->
-    <section id="intro" class="intro-section">
+    <section id="intro" class="intro-section" 
+    style="background-image: url('images/banner.png');
+           background-repeat: no-repeat; 
+           background-size: cover;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Welcome</h1>
-                    <p>To continue using Goddard, please Sign In or Sign Up</p>
-                    <% if current_user.blank? %>
-                      <li class="btn btn-default page-scroll"><%= link_to "Sign Up", new_user_registration_path %></li>
-                      <li class="btn btn-default page-scroll"><%= link_to "Log In", new_user_session_path %></li>
-                    <% else %>
-                      <li class="btn btn-default page-scroll"><%= link_to("Logout (#{current_user.email})", destroy_user_session_path, :method => :delete) %></li>
-                    <% end %>
+                    <img src="images/goddard_logo.png" alt="Goddard" class="img-responsive"><br>
+                    <h3>A real-time technology resource finder</h3>
+                    <a class="btn btn-default page-scroll" href="#about">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
+    <section id="about" class="about-section"
+    style="background-image: url(images/about.jpeg);
+           background-repeat: no-repeat; 
+           background-size: cover;
+           color: white;
+           background-position:center;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>About Section</h1>
+                    <h1><b>About</b></h1><br>
+                    <h3>We provide <strong><i>fast</i></strong> updates on the availability of: </h3><br>
+                    <ul class="list-unstyled">
+                    <h4>
+                        <li>Computers</li><br>
+                        <li>Printers</li><br>
+                        <li>Software</li><br>
+                        <li>Emergencies</li><br>
+                        <li>Usage Trends</li><br>
+                        <li>Other tech-related resources</li>
+                    </h4>
+                    </ul>
+                    <h3>All in <strong><i>one</i></strong> dashboard</h3>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services-section">
+    <section id="services" class="services-section"  
+    style="background-image: url('images/services.png'); 
+           background-repeat: no-repeat; 
+           background-size: cover;
+           background-position:center;"
+           >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Services Section</h1>
+                    <h1>Services</h1>
+                    <h3>Big Data Analysis</h3>
+                    <h3>Powerful Search Engine</h3>
+                    <h3>Data Mining</h3>
+                    <h3>Data Consultants</h3>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section"
+    style="background-image: url('images/contact.png'); 
+           background-repeat: no-repeat; 
+           background-size: cover;
+           color: white;
+           
+           background-position:center;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Contact Section</h1>
+                    <h1><b>Contact</b></h1>
+                    <h3>Headquarters</h3>
+                    <h4>1 Doggard Lane, New York City 130987</h4>
+                    <h4>dev-team@goddard.com</h4>
                 </div>
             </div>
         </div>
