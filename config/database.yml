@@ -53,3 +53,4 @@ production:
   pool: 5
   username: ub_goddard
   password:
+  url:  <%= ENV.fetch("DATABASE_URL", "") %>
