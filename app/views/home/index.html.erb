@@ -55,6 +55,21 @@
                       <li class="btn btn-default page-scroll"><%= link_to "Log In", new_user_session_path %></li>
                     <% else %>
                       <li class="btn btn-default page-scroll"><%= link_to("Logout (#{current_user.email})", destroy_user_session_path, :method => :delete) %></li>
+                     <li>
+                        <a class="page-scroll" href="#usetype">Usage Type</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="#ossec">OS Selection</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="#campsec">Campus Selection</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="#libsec">Library/Lab Selection</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="#compsec">Computer Selection</a>
+                    </li>
                     <% end %>
                     <li>
                         <a class="page-scroll" href="#about">About</a>
@@ -72,7 +87,91 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Intro Section -->
+    
+<% if current_user.present? %>
+
+<!-- Use Type -->
+<section id="usetype" class="about-section"
+    style="background-image: url(images/one.png);
+           background-repeat: no-repeat; 
+           background-size: cover;
+           color: white;
+           background-position:center;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- os sec -->
+<section id="ossec" class="about-section"
+    style="background-image: url(images/two.png);
+           background-repeat: no-repeat; 
+           background-size: cover;
+           color: white;
+           background-position:center;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Use Type -->
+<section id="campsec" class="about-section"
+    style="background-image: url(images/three.png);
+           background-repeat: no-repeat; 
+           background-size: cover;
+           color: white;
+           background-position:center;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Use Type -->
+<section id="libsec" class="about-section"
+    style="background-image: url(images/four.png);
+           background-repeat: no-repeat; 
+           background-size: cover;
+           color: white;
+           background-position:center;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- compsec -->
+<section id="compsec" class="about-section"
+    style="background-image: url(images/five.png);
+           background-repeat: no-repeat; 
+           background-size: cover;
+           color: white;
+           background-position:center;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+<% end %>
+
+<!-- Intro Section -->
     <section id="intro" class="intro-section" 
     style="background-image: url('images/banner.png');
            background-repeat: no-repeat; 
